@@ -1,0 +1,147 @@
+ /* 기본 스타일 */
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+#main-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+#map-container {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  position: relative; /* 지역 정보 위치 조정을 위한 상대 위치 */
+}
+
+#map {
+  position: relative; /* 지역 클릭 요소 위치 조정을 위해 상대 위치 */
+}
+
+.region {
+  position: absolute;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  color: black;
+  padding: 2px 10px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.region:hover {
+  background-color: white;
+  font-weight: bold;
+}
+
+.region[data-name="강원"] { background-color: #9195D9; }
+.region[data-name="경기"] { background-color: #F29BA2; }
+.region[data-name="인천"] { background-color: #72E4E3; }
+.region[data-name="서울"] { background-color: #F2E49B; }
+.region[data-name="충북"] { background-color: #79D988; }
+.region[data-name="세종"] { background-color: #F29BA2; }
+.region[data-name="대전"] { background-color: #F2E49B; }
+.region[data-name="충남"] { background-color: #F2E49B; }
+.region[data-name="전북"] { background-color: #F29BA2; }
+.region[data-name="광주"] { background-color: #F2E49B; }
+.region[data-name="전남"] { background-color: #F9CB9C; }
+.region[data-name="경북"] { background-color: #D196D9; }
+.region[data-name="경남"] { background-color: #9195D9; }
+.region[data-name="대구"] { background-color: #72E4E3; }
+.region[data-name="울산"] { background-color: #F9CB9C; }
+.region[data-name="부산"] { background-color: #79D988; }
+.region[data-name="제주"] { background-color: #72E4E3; }
+
+
+
+/* 공통 스타일 */
+.data-container {
+  flex: 1; /* 두 패널이 동일한 비율로 크기를 차지 */
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  overflow-y: auto; /* 스크롤 가능 */
+  min-height: 400px; /* 패널의 최소 높이를 지정 */
+  max-height: 500px; /* 패널의 최대 높이를 제한 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 패널 내부 데이터 스타일 */
+.data-output {
+  flex-grow: 1; /* 패널의 높이에 맞게 늘어남 */
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 패널 내부 컨텐츠 간격 조정 */
+.data-output div {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.data-output div:last-child {
+  border-bottom: none;
+}
+
+.data-output strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* 페이징 버튼 정렬 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pagination button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pagination button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  font-weight: bold;
+}
+
+/* 패널 배경과 간격 */
+#info-panel,
+#new-panel {
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+

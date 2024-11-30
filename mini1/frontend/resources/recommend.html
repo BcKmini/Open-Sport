@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI 계산 및 운동 추천</title>
+    <link rel="stylesheet" href="css/recommend.css">
+    <script src="js/recommend.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>BMI 계산 및 운동 추천</h2>
+
+        <label for="age">나이:</label>
+        <select id="age">
+            <option value="10대">10대</option>
+            <option value="20대">20대</option>
+            <option value="30대">30대</option>
+            <option value="40대">40대</option>
+            <option value="50대">50대</option>
+            <option value="60대">60대</option>
+            <option value="70대 이상">70대 이상</option>
+        </select>
+
+        <label for="weight">체중 (kg):</label>
+        <input type="number" id="weight" placeholder="체중을 입력하세요">
+
+        <label for="height">키 (cm):</label>
+        <input type="number" id="height" placeholder="키를 입력하세요">
+
+        <button onclick="calculateBMI()">BMI 계산 및 추천 받기</button>
+
+        <div class="result" id="result">
+            <!-- BMI 결과 표시 -->
+        </div>
+
+        <div class="exercise" id="exercise">
+            <!-- 추천 운동 표시 -->
+        </div>
+    </div>
+</body>
+</html>
