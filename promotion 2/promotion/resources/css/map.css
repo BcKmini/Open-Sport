@@ -1,0 +1,151 @@
+#KR-11 { fill: #9195D9; fill-opacity: 0.5;}
+#KR-26 { fill: #F29BA2; fill-opacity: 0.5;}
+#KR-27 { fill: #72E4E3; fill-opacity: 0.5;}
+#KR-28 { fill: #F2E49B; fill-opacity: 0.5;}
+#KR-29 { fill: #79D988; fill-opacity: 0.5;}
+#KR-30 { fill: #F29BA2; fill-opacity: 0.5;}
+#KR-31 { fill: #F2E49B; fill-opacity: 0.5;}
+#KR-41 { fill: #F2E49B; fill-opacity: 0.5;}
+#KR-42 { fill: #F29BA2; fill-opacity: 0.5;}
+#KR-43 { fill: #F2E49B; fill-opacity: 0.5;}
+#KR-44 { fill: #F9CB9C; fill-opacity: 0.5;}
+#KR-45 { fill: #D196D9; fill-opacity: 0.5;}
+#KR-46 { fill: #9195D9; fill-opacity: 0.5;}
+#KR-47 { fill: #72E4E3; fill-opacity: 0.5;}
+#KR-48 { fill: #F9CB9C; fill-opacity: 0.5;}
+#KR-49 { fill: #79D988; fill-opacity: 0.5;}
+#KR-50 { fill: #72E4E3; fill-opacity: 0.5;}
+
+#KR-11:hover { fill: #9195D9; fill-opacity: 1;}
+#KR-26:hover { fill: #F29BA2; fill-opacity: 1;}
+#KR-27:hover { fill: #72E4E3; fill-opacity: 1;}
+#KR-28:hover { fill: #F2E49B; fill-opacity: 1;}
+#KR-29:hover { fill: #79D988; fill-opacity: 1;}
+#KR-30:hover { fill: #F29BA2; fill-opacity: 1;}
+#KR-31:hover { fill: #F2E49B; fill-opacity: 1;}
+#KR-41:hover { fill: #F2E49B; fill-opacity: 1;}
+#KR-42:hover { fill: #F29BA2; fill-opacity: 1;}
+#KR-43:hover { fill: #F2E49B; fill-opacity: 1;}
+#KR-44:hover { fill: #F9CB9C; fill-opacity: 1;}
+#KR-45:hover { fill: #D196D9; fill-opacity: 1;}
+#KR-46:hover { fill: #9195D9; fill-opacity: 1;}
+#KR-47:hover { fill: #72E4E3; fill-opacity: 1;}
+#KR-48:hover { fill: #F9CB9C; fill-opacity: 1;}
+#KR-49:hover { fill: #79D988; fill-opacity: 1;}
+#KR-50:hover { fill: #72E4E3; fill-opacity: 1;}
+
+.map_content{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.map_content .map{
+    flex: 1;
+    aspect-ratio: 1 / 1;
+}
+
+
+#info-panel {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    max-width: 1200px;
+    flex: 1;
+    aspect-ratio: 1 / 1;
+}
+
+h2, h3 {
+    color: #007bff;
+}
+
+.data-output {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.data-output div {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.data-output div:last-child {
+    border-bottom: none;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.pagination button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-weight: bold;
+}
+
+/* Flexbox 컨테이너 스타일 */
+.data-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.data-output {
+    flex: 1 1 calc(33.333% - 20px);
+    min-width: 250px;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 1024px) {
+    .data-output {
+        flex: 1 1 calc(50% - 20px);
+    }
+    .map_content{flex-direction: column;}
+}
+
+@media screen and (max-width: 768px) {
+    .data-output {
+        flex: 1 1 100%;
+    }
+
+    #info-panel {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pagination button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    h2, h3 {
+        font-size: 1.2em;
+    }
+}

@@ -1,0 +1,236 @@
+@import url("common.css");
+@import url("header.css");
+
+.main_swiper{position: relative;}
+.layout_main{
+    position:relative; margin:0 auto; line-height:1.5;
+}
+.layout_main .main_swiper {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.layout_main .main_swiper .swiper-wrapper .bg {
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    top: 0; 
+    bottom: 0;      
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position: center top;
+    z-index: 1;
+}
+
+.main_swiper .swiper_nav_next{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255, 0.1);
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    z-index: 9;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.main_swiper .swiper_nav_next i, .main_swiper .swiper_nav_prev i  {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_swiper .swiper_nav_prev{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 255, 255, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    z-index: 9;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 25px;
+}
+.swiper-pagination-bullet-active{background: #000 !important;}
+
+
+@media(max-width:1024px){
+   
+    .layout_main{margin-top: 40px;}
+    .main_swiper .swiper_nav_next,.main_swiper .swiper_nav_prev{
+        width: 30px;
+        height: 30px;
+        font-size: 15px;
+        
+    }
+    
+
+}
+.layout_main .contents{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0 60px;
+}
+
+.tabs {
+    width: 100%;
+    max-width: 800px;
+}
+
+
+/* 메인 및 서브 탭 */
+.tab-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.contents h2{font-size: 25px; font-weight: 500; margin-bottom: 10px;}
+
+.tab-menu {
+    display: flex;
+    flex-wrap: wrap; /* 한 줄이 꽉 차면 다음 줄로 넘어가도록 설정 */
+    gap: 5px; /* 항목 간의 간격 추가 */
+}
+
+.tab-menu li{width: 10%;}
+
+.tab-btn {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
+    width: 70px; /* 버튼 크기를 조정 */
+}
+
+.tab-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.tab-btn.on {
+    background-color: #092C6F;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+.tab-content.current {
+    display: block;
+}
+
+.nested-tab-menu {
+    display: flex;
+    overflow-x: scroll; 
+    white-space: nowrap; 
+}
+
+.nested-tab-btn {
+    flex: 0 0 auto;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ccc;
+}
+
+.nested-tab-btn:hover {
+    background-color: #e0e0e0;
+
+}
+
+.nested-tab-btn.on {
+    background-color: #092C6F;
+    color: white;
+    border: 1px solid #092C6F;
+
+}
+
+.nested-tab-contents ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nested-tab-content {
+    display: none;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #e9e9e9;
+}
+
+.nested-tab-content.current {
+    display: block;
+}
+
+@media(max-width:1200px){
+    .layout_main .contents{
+        padding: 30px 20px 40px;
+    }
+}
+
+/* 강좌종목안내  */
+.course_info {
+    width: 100%;
+}
+
+.course_info .course_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.course_info .course_item {
+    width: 24%;
+    min-width: 200px;
+    height: 250px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #e0f7fa;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.course_info .course_item:hover {
+    transform: translateY(-10px);
+    background-color: #b2ebf2;
+}
+
+.course_info .course_item dt {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00796b;
+    margin-bottom: 10px;
+}
+
+.course_info .course_item dd {
+    font-size: 1rem;
+    color: #004d40;
+    text-align: center;
+}
+
+@media(max-width:659px){
+    .course_info .course_list{justify-content: center;}
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .course_list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
