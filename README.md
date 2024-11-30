@@ -14,11 +14,6 @@ This project utilizes data from the **Culture Big Data Platform** ([link](https:
 
 ---
 
-### 🚀 Key Features:
-- Seamless database integration using **Amazon RDS**, managed and monitored with **DBeaver**.
-- Scalable deployment via **Amazon Elastic Beanstalk**.
-- Clean and responsive design for enhanced user experience.
-- Data-driven web application tailored for cultural insights.
 
 
 ![공모전 포스터](https://github.com/user-attachments/assets/88773a3f-613f-4e87-a538-c20e959e1d79)
