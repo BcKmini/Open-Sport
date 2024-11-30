@@ -1,0 +1,10 @@
+단기수강느낌_ 데이터가 정형화 되어있지 않고 복잡함..(기준을 못잡겠음)
+
+순서	컬럼영문명		컬럼한글명	데이터타입	길이	PK여부	NOT NULL여부
+1	ITEM_NM		종목명		VARCHAR	20		
+2	CNTER_NM		센터명		VARCHAR	100		
+3	COURSE_NM		강좌명		VARCHAR	100		
+4	COURSE_BEGIN_DE	강좌시작일자	DATE			
+5	COURSE_END_DE		강좌종료일자	DATE			
+6	ATNLC_MONTH_CO	수강개월수	NUMERIC			
+7	PSNCPA_CO		정원수		NUMERIC		
